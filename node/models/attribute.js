@@ -6,7 +6,7 @@ const AttributeSchema = new Schema({
   dataSubCategory: { type: String },
   uniqueID: { type: String },
   parentUniqueID: { type: String },
-  mainAttribute: { type: Number, 'default': 1 }, // Only Attributes with value 1 can be selected for extraction   
+  mainAttribute: { type: Number, 'default': 1 }, // Only Attributes with value 1 can be selected for extraction
   name: { type: String },
   attributType: { type: String },
   format: { type: String },
@@ -24,7 +24,7 @@ const AttributeSchema = new Schema({
   sourceElement: { type: String },
   sourceVerified: { type: Number, 'default': 0},  // sourceVerified = 1 confirms that the source definition is correct
   changeLog: { dateAdded: { type: Date },
-               userAdded: { type: String },
+               userChange: { type: String },
                changeType: { type: String },
                versionID: { type: Number, 'default': 0},
                previousVersionID: { type: Number, 'default': 0},
