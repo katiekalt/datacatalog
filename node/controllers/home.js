@@ -1,4 +1,4 @@
-const sidebar = require('../helpers/sidebar');
+// const sidebar = require('../helpers/sidebar');
 
 module.exports = {
   index(req, res){

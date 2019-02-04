@@ -21,6 +21,7 @@ const AttributeSchema = new Schema({
   additionalComments: { type: String },
   technicalName: { type: String },
   sourceSystem: { type: String },
+  dependentAttributes: { type: Number, 'default': 0},
   sourceElement: { type: String },
   sourceVerified: { type: Number, 'default': 0},  // sourceVerified = 1 confirms that the source definition is correct
   changeLog: { dateAdded: { type: Date },

@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link href="./public/css/bootstrap.css" rel="stylesheet">
     <title>USZDataCatalog</title>
   </head>
   <body>
@@ -23,6 +24,119 @@
        </div>
      </div>
 
+     <div class="container">
+       <div class="row">
+         <div class="col-sm-6">
+           <h2>Search</h2>
+           <div class="form-group">
+             <label for="input-check-node" class="sr-only">Search Tree:</label>
+             <input type="input" class="form-control" id="input-check-node" placeholder="Identify node..." value="Parent 1">
+           </div>
+
+           <h2>Attributes</h2>
+           <div id="treeview-checkable" class=""></div>
+         </div>
+         <div class="col-sm-6">
+
+           <h2>Details</h2>
+           <button type="button" class="btn btn-success check-node" id="btn-new">new attribute</button>
+           <button type="button" class="btn btn-success check-node" id="btn-edit">edit</button>
+           <button type="button" class="btn btn-success check-node" id="btn-history">history</button>
+           <div id="selected-output"></div>
+           <div id="checkable-output"></div>
+
+           <div class="input-group input-group-sm mb-3">
+             <div class="input-group-prepend">
+               <span class="input-group-text" id="inputGroup-sizing-sm">Category</span>
+             </div>
+             <input name="dataCategory" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+           </div>
+           <div class="input-group input-group-sm mb-3">
+             <div class="input-group-prepend">
+               <span class="input-group-text" id="inputGroup-sizing-sm">SubCategory</span>
+             </div>
+             <input name="dataSubCategory" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+           </div>
+           <div class="input-group input-group-sm mb-3">
+             <div class="input-group-prepend">
+               <span class="input-group-text" id="inputGroup-sizing-sm">UniqueID</span>
+             </div>
+             <input name="uniqueID" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+           </div>
+           <div class="input-group input-group-sm mb-3">
+             <div class="input-group-prepend">
+               <span class="input-group-text" id="inputGroup-sizing-sm">Name</span>
+             </div>
+             <input name="name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+           </div>
+           <div class="input-group input-group-sm mb-3">
+             <div class="input-group-prepend">
+               <span class="input-group-text" id="inputGroup-sizing-sm">Description</span>
+             </div>
+             <input name="description" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+           </div>
+           <div class="input-group input-group-sm mb-3">
+             <div class="input-group-prepend">
+               <span class="input-group-text" id="inputGroup-sizing-sm">Example</span>
+             </div>
+             <input name="example" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+           </div>
+           <div class="input-group input-group-sm mb-3">
+             <div class="input-group-prepend">
+               <span class="input-group-text" id="inputGroup-sizing-sm">Format</span>
+             </div>
+             <input name="format" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+           </div>
+           <div class="input-group input-group-sm mb-3">
+             <div class="input-group-prepend">
+               <span class="input-group-text" id="inputGroup-sizing-sm">Coding System</span>
+             </div>
+             <input name="codingSystem" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+           </div>
+           <div class="input-group input-group-sm mb-3">
+             <div class="input-group-prepend">
+               <span class="input-group-text" id="inputGroup-sizing-sm">Coredata Variable ID (SPHN)</span>
+             </div>
+             <input name="coreDataVariableID" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+           </div>
+           <div class="input-group input-group-sm mb-3">
+             <div class="input-group-prepend">
+               <span class="input-group-text" id="inputGroup-sizing-sm">Additional Comments</span>
+             </div>
+             <input name="additionalComments" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+           </div>
+           <div class="input-group input-group-sm mb-3">
+             <div class="input-group-prepend">
+               <span class="input-group-text" id="inputGroup-sizing-sm">Technical Name</span>
+             </div>
+             <input name="technicalName" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+           </div>
+           <div class="input-group input-group-sm mb-3">
+             <div class="input-group-prepend">
+               <span class="input-group-text" id="inputGroup-sizing-sm">Source System</span>
+             </div>
+             <input name="sourceSystem" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+           </div>
+           <div class="input-group input-group-sm mb-3">
+             <div class="input-group-prepend">
+               <span class="input-group-text" id="inputGroup-sizing-sm">Source Element</span>
+             </div>
+             <input name="sourceElement" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+           </div>
+           <div class="input-group input-group-sm mb-3">
+             <div class="input-group-prepend">
+               <span class="input-group-text" id="inputGroup-sizing-sm">Source is verified</span>
+             </div>
+             <input name="sourceVerified" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+           </div>
+
+
+         </div>
+       </div>
+     </div>
+
+
+
 
     <div style="border-top: solid 1px #eee; padding-top: 1em;">
       <div class="container">
@@ -41,7 +155,107 @@
     </div>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="./public/js/jquery.js"></script>
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+    <script src="./public/js/bootstrap-treeview.js"></script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script> -->
+
+    <script type="text/javascript">
+
+  $(function() {
+
+    var defaultData = [];
+
+    $.get(`/attribute`).done(function(data){
+        defaultData = data;
+        // console.log( defaultData );
+
+    var $checkableTree = $('#treeview-checkable').treeview({
+      data: defaultData,
+      showIcon: false,
+      showCheckbox: true,
+      onNodeChecked: function(event, node) {
+        $('#checkable-output').prepend('<p>' + node.text + ' was checked</p>');
+      },
+      onNodeUnchecked: function (event, node) {
+        $('#checkable-output').prepend('<p>' + node.text + ' was unchecked</p>');
+      },
+      onNodeSelected: function(event, node) {
+        // $('#selected-output').prepend('<p>' + node.text + ' was selected</p>');
+        event.preventDefault();
+        var attributeID = node.uniqueID;
+
+        $.getJSON(`/attribute/${attributeID}`).done(function(data){
+          console.log( "attributeDetails " + data );
+          $.each(data, function(name, val){
+            var $el = $('[name="'+name+'"]'),
+            type = $el.attr('type');
+            switch(type){
+              case 'checkbox':
+              case 'radio':
+              default:
+              $el.val(val);
+            }
+          console.log("name and val: " + name + " "+ val);
+          });
+
+          $('#selected-output').prepend('<p>' + data + ' was returned</p>');
+        });
+      }
+    });
+
+
+    var findCheckableNodess = function() {
+      return $checkableTree.treeview('search', [ $('#input-check-node').val(), { ignoreCase: false, exactMatch: false } ]);
+    };
+    var checkableNodes = findCheckableNodess();
+
+    // Check/uncheck/toggle nodes
+    $('#input-check-node').on('keyup', function (e) {
+      checkableNodes = findCheckableNodess();
+      $('.check-node').prop('disabled', !(checkableNodes.length >= 1));
+    });
+
+    $('#btn-check-node.check-node').on('click', function (e) {
+      $checkableTree.treeview('checkNode', [ checkableNodes, { silent: $('#chk-check-silent').is(':checked') }]);
+    });
+
+    $('#btn-uncheck-node.check-node').on('click', function (e) {
+      $checkableTree.treeview('uncheckNode', [ checkableNodes, { silent: $('#chk-check-silent').is(':checked') }]);
+    });
+
+    $('#btn-toggle-checked.check-node').on('click', function (e) {
+      $checkableTree.treeview('toggleNodeChecked', [ checkableNodes, { silent: $('#chk-check-silent').is(':checked') }]);
+    });
+
+    // $('#btn-select-node.select-node').on('click', function (e) {
+    //   console.log("onclick select");
+    //   $checkableTree.treeview('selectNode', [ checkableNodes, { silent: $('#chk-select-silent').is(':checked') }]);
+    // });
+
+    // Check/uncheck all
+    $('#btn-check-all').on('click', function (e) {
+      $checkableTree.treeview('checkAll', { silent: $('#chk-check-silent').is(':checked') });
+    });
+
+    $('#btn-uncheck-all').on('click', function (e) {
+      $checkableTree.treeview('uncheckAll', { silent: $('#chk-check-silent').is(':checked') });
+    });
+
+    // $('#btn-collapse-all').on('click', function (e) {
+      $checkableTree.treeview('collapseAll', { silent: $('#chk-expand-silent').is(':checked') });
+    // });
+
+  });
+
+
+  });
+    </script>
+
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+    <script type="text/javascript" src="/public/js/scripts.js"></script>
+
   </body>
 </html>

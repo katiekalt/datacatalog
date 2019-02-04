@@ -3,7 +3,7 @@ const mongoose = require('mongoose'),
 
 const LabExtensionSchema = new Schema({
   processingCode: { type: String },
-  sourceSystemIDs: { [{ lisNumber: { type: String }}]},
+  sourceSystemIDs: {  lisNumber: { type: String }},
   loincCode: { type: String },
   description: { type: String },
   synonyms: { type: String },
