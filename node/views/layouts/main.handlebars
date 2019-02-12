@@ -2,8 +2,14 @@
 <html lang="en-US">
   <head>
     <meta charset="utf-8">
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script> -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script> --> -->
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     <link href="./public/css/bootstrap.css" rel="stylesheet">
+
     <title>USZDataCatalog</title>
   </head>
   <body>
@@ -49,13 +55,13 @@
              <div class="input-group-prepend">
                <span class="input-group-text" id="inputGroup-sizing-sm">Category</span>
              </div>
-             <input name="dataCategory" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+             <input name="category" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
            </div>
            <div class="input-group input-group-sm mb-3">
              <div class="input-group-prepend">
                <span class="input-group-text" id="inputGroup-sizing-sm">SubCategory</span>
              </div>
-             <input name="dataSubCategory" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+             <input name="subCategory" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
            </div>
            <div class="input-group input-group-sm mb-3">
              <div class="input-group-prepend">
@@ -97,13 +103,19 @@
              <div class="input-group-prepend">
                <span class="input-group-text" id="inputGroup-sizing-sm">Coredata Variable ID (SPHN)</span>
              </div>
-             <input name="coreDataVariableID" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+             <input name="coreDatasetVariableID" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
            </div>
            <div class="input-group input-group-sm mb-3">
              <div class="input-group-prepend">
                <span class="input-group-text" id="inputGroup-sizing-sm">Additional Comments</span>
              </div>
              <input name="additionalComments" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+           </div>
+           <div class="input-group input-group-sm mb-3">
+             <div class="input-group-prepend">
+               <span class="input-group-text" id="inputGroup-sizing-sm">snomedConcept</span>
+             </div>
+             <input name="snomedConcept" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
            </div>
            <div class="input-group input-group-sm mb-3">
              <div class="input-group-prepend">
@@ -124,10 +136,11 @@
              <input name="sourceElement" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
            </div>
            <div class="input-group input-group-sm mb-3">
-             <div class="input-group-prepend">
+             <!-- <div class="input-group-prepend"> -->
                <span class="input-group-text" id="inputGroup-sizing-sm">Source is verified</span>
-             </div>
-             <input name="sourceVerified" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+             <!-- </div> -->
+             <!-- <input type="checkbox" class="checkbox" id="chk-check-silent" value="false"> -->
+             <input name="sourceVerified" type="checkbox" class="checkbox" value="false">
            </div>
 
 
@@ -143,7 +156,7 @@
         <div class="row">
           <div class="col-sm-12 text-center">
             <p class="text-muted">USZDataCatalog.usz.ch |
-              &copy; Copyright 2018, All Rights Reserved
+              &copy; Copyright 2019, All Rights Reserved
             </p>
             <p class="text-center">
               <i class="fa fa-twitter-square fa-2x text-primary"></i>
@@ -177,10 +190,10 @@
       showIcon: false,
       showCheckbox: true,
       onNodeChecked: function(event, node) {
-        $('#checkable-output').prepend('<p>' + node.text + ' was checked</p>');
+        // $('#checkable-output').prepend('<p>' + node.text + ' was checked</p>');
       },
       onNodeUnchecked: function (event, node) {
-        $('#checkable-output').prepend('<p>' + node.text + ' was unchecked</p>');
+        // $('#checkable-output').prepend('<p>' + node.text + ' was unchecked</p>');
       },
       onNodeSelected: function(event, node) {
         // $('#selected-output').prepend('<p>' + node.text + ' was selected</p>');
@@ -201,7 +214,7 @@
           console.log("name and val: " + name + " "+ val);
           });
 
-          $('#selected-output').prepend('<p>' + data + ' was returned</p>');
+          // $('#selected-output').prepend('<p>' + data + ' was returned</p>');
         });
       }
     });

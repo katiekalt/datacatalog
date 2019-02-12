@@ -22,8 +22,8 @@ module.exports = {
       console.log('For Attribute.uniqueID ' + attribute.uniqueID);
 
       var newAttribute = new Models.Attribute({
-        dataCategory: attribute.dataCategory,
-        dataSubCategory: attribute.dataSubCategory,
+        category: attribute.category,
+        subCategory: attribute.subCategory,
         uniqueID: attribute.uniqueID,
         parentUniqueID: attribute.parentUniqueID,
         mainAttribute: attribute.mainAttribute,
@@ -36,8 +36,8 @@ module.exports = {
         occurency: attribute.occurency,
         nullValue: attribute.nullValue,
         codingSystem: attribute.codingSystem,
-        coreDataVariableID: attribute.coreDataVariableID,
-        snomedConcept: attribute.snomedConcept,
+        coreDatasetVariableID: attribute.coreDatasetVariableID,
+        snomedConcept: attribute.snomedCT,
         additionalComments: attribute.additionalComments,
         technicalName: attribute.technicalName,
         sourceSystem: attribute.sourceSystem,
@@ -45,12 +45,12 @@ module.exports = {
         sourceElement: attribute.sourceElement,
         sourceVerified: attribute.sourceVerified,
         changeLog: {
-          dateAdded: attribute.dateAdded,
-          userChange: attribute.userChange,
-          changeType: attribute.changeType,
-          versionID: attribute.versionID,
-          previousVersionID: attribute.previousVersionID,
-          dateDeactivated: attribute.dateDeactivated
+          activated: attribute.activated,
+          activity: attribute.activity,
+          userName: attribute.userName,
+          version: attribute.version,
+          dateChanged: attribute.dateChanged,
+          deactivated: attribute.deactivated
         }
       });
       newAttribute.save((err, attribute)=>{
